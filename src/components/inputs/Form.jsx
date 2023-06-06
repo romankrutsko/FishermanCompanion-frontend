@@ -32,10 +32,10 @@ const Form = ({ fields, submitFunction, submitButtonName, cancelButtonName, onCa
         <div className='p-5'>
             {title && <h2 className="text-xl font-bold">{title}</h2>}
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
-                <div className={`${isHorizontal ? 'flex flex-col md:flex-row items-center gap-4' : ''}`}>
+                <div className={`${isHorizontal ? 'flex flex-col md:flex-row gap-4' : ''}`}>
                     {fields.map((field) => (
                         <div key={field.name} 
-                        className={`${field.type === 'checkbox' ? 'flex flex-row items-center text-justify' : ''}`}>
+                        className={`${field.type === 'checkbox' ? 'flex flex-row items-center' : ''}`}>
                             <label htmlFor={field.name} className="block font-medium text-gray-700">
                                 {field.label}
                                 {field.required && <span className="text-red-500">*</span>}

@@ -34,9 +34,9 @@ function CollectionWrapper({ items, setCollection, itemsPerPage, onNext, onPrevi
 
     return (
         <>
-            {isToolbar && <div className="flex flex-col md:flex-row items-center justify-evenly px-4 py-2 bg-gray-200">
+            {isToolbar && <div className="flex flex-col md:flex-row items-center justify-evenly bg-gray-200">
                 {isSearch && <Form fields={fields} submitButtonName='Пошук' cancelButtonName='Очистити фільтри' submitFunction={onSearch} isHorizontal={true} onCancel={onCancel} />}
-                {isCreate && <button onClick={onModal} className="px-8 py-4 text-white text-2xl bg-green-500 rounded hover:bg-green-600">Створити пост</button>}
+                {isCreate && <button onClick={onModal} className="px-8 py-4 text-white bg-green-500 rounded hover:bg-green-600">Створити</button>}
                 <ErrorOrLoading error={error} loading={loading} />
             </div>}
             {count === 0 && <div className='text-center p-4 font-bold text-2xl'>Не знайдено</div>}

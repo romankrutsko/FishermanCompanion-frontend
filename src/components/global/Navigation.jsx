@@ -37,23 +37,23 @@ function Navigation() {
                         Fisherman Companion
                     </Link>
                 </div>
-                <div className='flex flex-col justify-center items-center text-lg gap-4 md:flex-row'>
+                <div className='flex flex-col items-center text-lg gap-4 md:flex-row'>
                     {isAuth ? (
                         <>
-                            <div className="cursor-pointer group relative dropdown tracking-wide py-4">
+                            <div className="cursor-pointer group relative dropdown tracking-wide md:py-4">
                                 <div className="p-2 rounded-md text-white group-hover:bg-yellow-400">
                                     <Link to='/' className='flex flex-row justify-center items-center gap-1'>
                                         <span>Пости</span>
                                         <MdOutlineArrowDropDownCircle />
                                     </Link>
                                 </div>
-                                <div className='p-2 group-hover:block dropdown-menu absolute hidden mt-2 w-full rounded-md h-auto bg-white text-black text-justifys'>
+                                <div className='p-2 group-hover:block dropdown-menu absolute hidden mt-2 w-full rounded-md h-auto bg-white text-black text-justify z-10'>
                                     <Link to={`/users/${userID}/posts`} className="p-2 block rounded-md hover:bg-gray-200">Мої</Link>
                                     <Link to='/' className="p-2 block rounded-md hover:bg-gray-200">Всі</Link>
                                 </div>
                             </div>
 
-                            <div className="cursor-pointer group relative dropdown tracking-wide py-4">
+                            <div className="cursor-pointer group relative dropdown tracking-wide md:py-4">
                                 <div className="p-2 rounded-md text-white group-hover:bg-yellow-400">
                                     <Link to={`/users/${userID}/trips/future`} className='flex flex-row justify-center items-center gap-1'>
                                         <span>Подорожі</span>
@@ -66,17 +66,17 @@ function Navigation() {
                                 </div>
                             </div>
 
-                            <div className="text-white rounded-md">
-                                <Link to={`/users/${userID}/requests`} className="p-2 block rounded-md hover:bg-gray-200">Мої запити</Link>
+                            <div className="p-2 text-white rounded-md">
+                                <Link to={`/users/${userID}/requests`}>Мої запити</Link>
                             </div>
 
-                            <div className="text-white rounded-md">
+                            <div className="p-2 text-white rounded-md">
                                 <Link to={`/users/${userID}`}>
                                     Профіль
                                 </Link>
                             </div>
 
-                            <div onClick={handleLogOut} className="сursor-pointer text-white rounded-md ">
+                            <div onClick={handleLogOut} className="p-2 text-white rounded-md ">
                                 <Link to='/'>
                                     Вихід
                                 </Link>
