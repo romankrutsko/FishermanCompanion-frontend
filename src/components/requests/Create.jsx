@@ -22,6 +22,7 @@ function CreateRequest({ isOpen, onClose, post, setPost }) {
             .then(response => {
                 setRequest(response.data)
                 setPost(response.data.post)
+                if(onClose) onClose()
             })
     }
     return (

@@ -5,7 +5,7 @@ import Show from './Show';
 import PostService from '../../lib/services/post-service';
 import CategoryService from '../../lib/services/category-service'
 
-function CreatePost({ onClose, isOpen, updateCollection }) {
+function CreatePost({ onClose, isOpen, updateСollection }) {
     const [post, setPost] = useState(null)
     const fields =
         [
@@ -57,7 +57,7 @@ function CreatePost({ onClose, isOpen, updateCollection }) {
     const modalHandler = () => {
         onClose()
         setPost(null)
-        updateCollection()
+        updateСollection()
     }
     return (
         <>

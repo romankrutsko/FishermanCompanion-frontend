@@ -29,6 +29,7 @@ function Create({ isOpen, onClose, userID, fetchFinishedTripMembers }) {
             .then(response => {
                 setResponse(response.data)
                 if (fetchFinishedTripMembers) fetchFinishedTripMembers()
+                if(onClose) onClose()
             })
     }
 
