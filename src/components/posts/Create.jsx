@@ -26,7 +26,7 @@ function CreatePost({ onClose, isOpen, updateСollection }) {
                 name: 'description',
                 label: 'Деталі',
                 required: true,
-                type: 'text'
+                type: 'textarea'
             },
             {
                 name: 'startDate',

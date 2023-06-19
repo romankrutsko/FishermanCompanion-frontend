@@ -26,7 +26,7 @@ function Update({ isOpen, onClose, post, setPost }) {
                 name: 'description',
                 label: 'Деталі',
                 required: true,
-                type: 'text'
+                type: 'textarea'
             },
             {
                 name: 'startDate',
