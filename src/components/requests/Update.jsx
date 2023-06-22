@@ -33,6 +33,7 @@ function Update({ isOpen, onClose, request, isEdit, setItem }) {
             .then(response => {
                 setValues(response.data)
                 setItem(response.data)
+                if(onClose) onClose()
             })
     }
     return (
